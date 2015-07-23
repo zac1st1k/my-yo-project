@@ -70,7 +70,8 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    // max-width: 730px;
+    // max-width: 1300px;
   }
 
   /* Remove the padding we set earlier */
@@ -89,5 +90,67 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+
+  /* Create Piano Menu*/
+  $piano-color: #2F4F55;
+  html{
+    height:100%;
+    position:relative
+  }
+  body{
+    height:100%; /* force the BODY element to match the height of the HTML element */
+  }
+  #homepage {
+    position: absolute;
+    width: 95%;
+    margin-left: -2000px;
+    background-color: lightgrey;
+  }
+  #piano-menu {
+    position: absolute;
+    display: table;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: lightgrey;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    ul {
+      display: table-row;
+      background-color: grey;
+      li {
+        display: table-cell;
+        background-color: $piano-color;
+        color: white;
+        width: 200px;
+        text-align: center;
+        vertical-align: middle;
+        a {
+          color: white;
+        }
+        &.piano-gutter {
+        width: 5px;
+        background-color: transparent;
+      }
+
+      }
+    }
+  }
+  #side-menu{
+    position: fixed;
+    right: -50px;
+    top: 50%;
+    margin-top: -71px;
+    list-style: none;
+    .side-menu-item {
+      padding-top: 10px;
+    }
+    img {
+      border: solid 1px white;
+      border-radius: 10px;
+    }
   }
 }
